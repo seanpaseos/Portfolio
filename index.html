@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Course Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Multiple interesting fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Oswald:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Ensure content fades in on page load */
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="header-text">
+                <h1>My Digital Course Portfolio</h1>
+                <p>Showcasing my achievements as a student in Information Systems Course</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Key Projects</a></li>
+            <li><a href="#awards">Awards & Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="skills">
+            <h2>Skills Overview</h2>
+            <h3>As an Information Systems student, I have developed strong technical skills that have allowed me to successfully complete various projects. Below are some of the key skills I have acquired, particularly in HTML, CSS, and JavaScript. These skills have helped me build dynamic and user-friendly websites, manage data efficiently, and solve complex problems through technology.</h3>
+            <h2>HTML, CSS, and JavaScript Skills</h2>
+            <p>This portfolio showcases my skills in HTML, CSS, and JavaScript through various projects and assignments.</p>
+            <div class="skill">
+                <p>HTML</p>
+                <div class="skill-bar" style="--width: 90%;"></div>
+            </div>
+            <div class="skill">
+                <p>CSS</p>
+                <div class="skill-bar" style="--width: 87%;"></div>
+            </div>
+            <div class="skill">
+                <p>JavaScript</p>
+                <div class="skill-bar" style="--width: 85%;"></div>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Key poject, Awards & Certifications</h2>
+            <div class="photo-collage">
+                <div class="project">
+                    <h3>All Key Projects, Awards and Certifications throughout my journey</h3>
+                    <p>My journey as an Information Systems student has been rewarding, enhancing my skills in programming, problem-solving, and teamwork.</p>
+                    <button onclick="window.location.href='Awards_and_Certification/index.html'" class="project-link">View Profile <i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Visual Project Highlights</h2>
+            <div class="project">
+                <h3>All Pictorial evidence throughout my journey</h3>
+                <p>My journey as an Information Systems student has been rewarding, enhancing my skills in programming, problem-solving, and teamwork.</p>
+                <button onclick="window.location.href='Key_projects/index.html'" class="project-link">View Highlights <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to connect, feel free to reach out!</p>
+            <p>Email: <a href="mailto:seanpaseos8@gmail.com">seanpaseos8@gmail.com</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025-2026 My Digital Course Portfolio</p>
+    </footer>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

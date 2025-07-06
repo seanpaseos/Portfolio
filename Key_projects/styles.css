@@ -1,0 +1,144 @@
+/* Global Settings */
+body, h1 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin-bottom: 0; /* Adjusted for clean spacing */
+}
+
+/* Updated Color Palette */
+body {
+    background-color: #1a1a2e; /* Deep navy blue */
+    color: #f0f0f0; /* Light text for contrast */
+}
+
+.w3-sidebar {
+    background-color: #162447; /* Darker shade for sidebar */
+}
+
+
+.w3-bar-item {
+    color: #ffffff; /* Soft pinkish red for the links */
+    padding: 10px 15px; /* Added padding for better spacing */
+}
+
+.w3-bar-item:hover {
+    background-color: #1f4068; /* Hover effect with lighter blue */
+}
+
+/* Header */
+header {
+    background-color: #53b8e1; /* Soft pinkish red for the header */
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px; /* Space below header */
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #162447; /* Matching footer background */
+    color: #f0f0f0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .fa {
+    color: #3775bd; /* Social media icon color */
+    font-size: 2rem;
+    padding: 10px;
+    margin: 0 10px; /* Added margin between icons */
+}
+
+footer .fa:hover {
+    color: #fff; /* White on hover for icons */
+}
+
+footer .footer-content {
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-top: 20px;
+}
+
+footer .footer-content a {
+    color: #53b8e1; /* Link color for footer */
+    text-decoration: none;
+}
+
+footer .footer-content a:hover {
+    color: #e43f5a; /* Hover effect for links */
+}
+
+/* Photo Grid */
+.w3-row {
+    margin-bottom: 128px;
+}
+
+.w3-third {
+    padding: 0 10px; /* Space between columns */
+    box-sizing: border-box;
+}
+
+.w3-third img {
+    width: 100%;
+    border: 5px solid #1f4068; /* Blue border around images */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 12px; /* Space between images */
+}
+
+.w3-third img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar Links */
+.w3-sidebar a {
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Adjusting the Padding and Layout */
+.w3-row-padding {
+    padding: 10px 50px;
+}
+
+.w3-content {
+    max-width: 1500px;
+    padding: 0 20px; /* Horizontal padding for content */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .w3-third img {
+        border: none;
+        box-shadow: none;
+    }
+
+    .w3-row-padding {
+        padding: 0;
+    }
+
+    .w3-row {
+        margin-bottom: 50px; /* Reduce space on smaller screens */
+    }
+
+    footer {
+        padding: 20px 0; /* Less padding on smaller screens */
+    }
+}
