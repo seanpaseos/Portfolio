@@ -11,6 +11,50 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
+  /* Loading Animation */
+  .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .loading-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .loader {
+    width: 80px;
+    height: 80px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Ensure content fades in on page load */
+  body {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  body.loaded {
+    opacity: 1;
+  }
+  
   /* Page Transition */
   .page-transition {
     position: fixed;
@@ -18,11 +62,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #4f46e5;
-    z-index: 9999;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    z-index: 9998;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .page-transition.active {
@@ -30,17 +77,16 @@
     pointer-events: all;
   }
   
-  /* Ensure content fades in on page load */
-  body {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  .page-transition::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
   }
   
-  body.loaded {
-    opacity: 1;
-  }
-</style>
-<style>
   /* Modal Image Styling */
   #imageModal {
     display: none; /* Hidden by default */
@@ -81,11 +127,16 @@
   }
 
   .w3-col img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.03); /* Reduced zoom effect on hover */
   }
 </style>
 </head>
 <body class="w3-theme-light-yellow">
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <div class="loader"></div>
+</div>
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -200,22 +251,27 @@
           <div class="w3-card w3-round w3-white">
             <div class="w3-container">
               <h5>Skills Progress</h5>
+      
               <p>Software Development</p>
-              <div class="w3-light-grey">
-                <div class="w3-container w3-theme-dark-orange w3-padding-small" style="width:85%">85%</div>
+              <div class="w3-light-grey w3-round">
+                <div class="w3-container" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); width:90%; padding:5px; color:white; text-align:center; border-radius:5px;">90%</div>
               </div>
-              <p>SQL Query Writing</p>
-              <div class="w3-light-grey">
-                <div class="w3-container w3-theme-green w3-padding-small" style="width:80%">80%</div>
+      
+              <p>Data Analysis</p>
+              <div class="w3-light-grey w3-round">
+                <div class="w3-container" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); width:85%; padding:5px; color:white; text-align:center; border-radius:5px;">85%</div>
               </div>
-              <p>Database Management</p>
-              <div class="w3-light-grey">
-                <div class="w3-container w3-theme-red w3-padding-small" style="width:75%">75%</div>
+      
+              <p>Cybersecurity</p>
+              <div class="w3-light-grey w3-round">
+                <div class="w3-container" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); width:80%; padding:5px; color:white; text-align:center; border-radius:5px;">80%</div>
               </div>
+      
               <p>UI/UX Design</p>
-              <div class="w3-light-grey">
-                <div class="w3-container w3-theme-yellow w3-padding-small" style="width:90%">90%</div>
+              <div class="w3-light-grey w3-round">
+                <div class="w3-container" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); width:95%; padding:5px; color:white; text-align:center; border-radius:5px;">95%</div>
               </div>
+      
             </div>
           </div>
         </div>
@@ -247,8 +303,9 @@
           <div class="w3-card w3-round w3-white">
             <div class="w3-container">
               <h5>Contact</h5>
-              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-text-theme-dark-orange"></i> seanpaseos3@gmail.com</p>
+              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-text-theme-dark-orange"></i> seanpaseos8@gmail.com</p>
               <p><i class="fa fa-phone fa-fw w3-margin-right w3-text-theme-dark-orange"></i> +63 975 894 5019</p>
+              <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-text-theme-dark-orange"></i> <a href="#" target="_blank">LinkedIn Profile</a></p>
             </div>
           </div>
         </div>
@@ -271,19 +328,33 @@
 <!-- Page Transition Overlay -->
 <div id="page-transition" class="page-transition"></div>
 
-<!-- JavaScript for Modal -->
+<!-- JavaScript for Modal and Loading -->
 <script>
-  // Open modal function
+  // Loading screen functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    
+    // Hide loading screen after 2 seconds
+    setTimeout(() => {
+      loadingScreen.classList.add('fade-out');
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    }, 2000);
+    
+    // Add loaded class to body for fade-in effect
+    document.body.classList.add('loaded');
+  });
+
   function openModal(imageSrc) {
-    document.getElementById('imageModal').style.display = 'block';
-    document.getElementById('modalImage').src = imageSrc;
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "flex";
+    modalImg.src = imageSrc;
   }
 
-  // Close modal function
   function closeModal() {
-    document.getElementById('imageModal').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    document.getElementById("imageModal").style.display = "none";
   }
 
   // Close modal when clicking outside image
@@ -291,39 +362,6 @@
     if (event.target === this) {
       closeModal();
     }
-  });
-  
-  // Handle page transitions for all internal links
-  document.addEventListener('DOMContentLoaded', function() {
-    // Add loaded class to body for fade-in effect
-    document.body.classList.add('loaded');
-    
-    // Handle internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="."], a[href^="../"], a[href*="index.html"]');
-    
-    internalLinks.forEach(link => {
-      // Skip if it's a link to an anchor on the same page or mailto: links
-      if (link.getAttribute('href').startsWith('#') || link.getAttribute('href').startsWith('mailto:')) return;
-      
-      link.addEventListener('click', function(e) {
-        // Don't prevent default for external links or links that open in new tabs
-        if (this.target === '_blank' || this.hostname !== window.location.hostname) {
-          return true;
-        }
-        
-        e.preventDefault();
-        const href = this.getAttribute('href');
-        
-        // Show transition overlay
-        const transition = document.getElementById('page-transition');
-        transition.classList.add('active');
-        
-        // Navigate after the transition completes
-        setTimeout(() => {
-          window.location.href = href;
-        }, 500);
-      });
-    });
   });
 </script>
 

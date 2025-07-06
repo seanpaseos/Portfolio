@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Applications - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Loading Animation */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Ensure content fades in on page load */
+        body {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading Web Applications...</p>
+        </div>
+    </div>
+
+    <!-- Background Particles -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="fade-in">Web Applications</h1>
+            <p class="subtitle fade-in">Professional web solutions for modern businesses</p>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- SendarHardware POS and Inventory Management System -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 style="color: #dc2626;">SendarHardware POS & Inventory Management System</h3>
+                        <p>A comprehensive point-of-sale and inventory management solution designed for hardware stores. Features include sales tracking, inventory control, customer management, and detailed reporting.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <button onclick="window.open('https://sendarhardware-pos.vercel.app', '_blank')" class="btn btn-primary">View Project</button>
+                            <button onclick="window.open('https://github.com/yourusername/sendarhardware-pos', '_blank')" class="btn btn-secondary">Source Code</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DentalBook Appointment Booking System -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>DentalBook Appointment Booking System</h3>
+                        <p>An efficient appointment scheduling system for dental clinics. Enables patients to book appointments online, manage schedules, and provides automated reminders and notifications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
+                        <div class="project-links">
+                            <button onclick="window.open('https://dentalbook-app.vercel.app', '_blank')" class="btn btn-primary">View Project</button>
+                            <button onclick="window.open('https://github.com/yourusername/dentalbook-app', '_blank')" class="btn btn-secondary">Source Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Technologies Used</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">PHP</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Express</span>
+                        <span class="skill-item">RESTful APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Database</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Firebase</span>
+                        <span class="skill-item">Firestore</span>
+                        <span class="skill-item">Real-time Database</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Tools & Deployment</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">GitHub</span>
+                        <span class="skill-item">Responsive Design</span>
+                        <span class="skill-item">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="contact-text fade-in">Interested in working together? Let's discuss your next project!</p>
+            <div class="contact-info fade-in">
+                <a href="mailto:your.email@example.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/yourusername" class="contact-item">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 

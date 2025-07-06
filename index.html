@@ -22,6 +22,24 @@
 </head>
 <body>
 
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <header>
         <div class="header-content">
             <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
@@ -42,11 +60,10 @@
     </nav>
 
     <div class="container">
-        <section id="skills">
-            <h2>Skills Overview</h2>
-            <h3>As an Information Systems student, I have developed strong technical skills that have allowed me to successfully complete various projects. Below are some of the key skills I have acquired, particularly in HTML, CSS, and JavaScript. These skills have helped me build dynamic and user-friendly websites, manage data efficiently, and solve complex problems through technology.</h3>
-            <h2>HTML, CSS, and JavaScript Skills</h2>
-            <p>This portfolio showcases my skills in HTML, CSS, and JavaScript through various projects and assignments.</p>
+        <section id="skills" class="fade-in">
+            <h2>Skills</h2>
+            <p>As an Information Systems student, I have developed strong technical skills in web development and programming. Here are my proficiency levels in key technologies:</p>
+            
             <div class="skill">
                 <p>HTML</p>
                 <div class="skill-bar" style="--width: 90%;"></div>
@@ -59,34 +76,62 @@
                 <p>JavaScript</p>
                 <div class="skill-bar" style="--width: 85%;"></div>
             </div>
+            <div class="skill">
+                <p>Database Management</p>
+                <div class="skill-bar" style="--width: 80%;"></div>
+            </div>
+            <div class="skill">
+                <p>UI/UX Design</p>
+                <div class="skill-bar" style="--width: 85%;"></div>
+            </div>
         </section>
 
-        <section id="awards">
-            <h2>Key poject, Awards & Certifications</h2>
-            <div class="photo-collage">
-                <div class="project">
-                    <h3>All Key Projects, Awards and Certifications throughout my journey</h3>
-                    <p>My journey as an Information Systems student has been rewarding, enhancing my skills in programming, problem-solving, and teamwork.</p>
-                    <button onclick="window.location.href='Awards_and_Certification/index.html'" class="project-link">View Profile <i class="fa fa-arrow-right"></i></button>
+        <section id="projects" class="fade-in">
+            <h2>Key Projects</h2>
+            <p>Here are some of the key projects I've worked on during my studies:</p>
+            
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A responsive portfolio website showcasing my skills and projects, built with HTML, CSS, and JavaScript.</p>
+                <button onclick="window.location.href='Key_projects/index.html'" class="project-link">View Project Gallery <i class="fa fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="project">
+                <h3>Web Application Development</h3>
+                <p>Various web applications demonstrating my ability to create functional and user-friendly interfaces.</p>
+                <button onclick="window.location.href='Web_Applications/index.html'" class="project-link">View More Projects <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section id="awards" class="fade-in">
+            <h2>Awards & Certifications</h2>
+            <p>Academic achievements and professional certifications earned throughout my educational journey:</p>
+            
+            <div class="project">
+                <h3>Academic Excellence</h3>
+                <p>Dean's List recognition, research project awards, and academic achievements at Mapúa University.</p>
+                <button onclick="window.location.href='Awards_and_Certification/index.html'" class="project-link">View Full Profile <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Contact</h2>
+            <p>Get in touch with me for any questions or opportunities:</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>Email: <a href="mailto:seanpaseos8@gmail.com">seanpaseos8@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-phone"></i>
+                    <span>Phone: +63 975 894 5019</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Location: Philippines</span>
                 </div>
             </div>
-        </section>
-        
-        <section id="projects">
-            <h2>Visual Project Highlights</h2>
-            <div class="project">
-                <h3>All Pictorial evidence throughout my journey</h3>
-                <p>My journey as an Information Systems student has been rewarding, enhancing my skills in programming, problem-solving, and teamwork.</p>
-                <button onclick="window.location.href='Key_projects/index.html'" class="project-link">View Highlights <i class="fa fa-arrow-right"></i></button>
-            </div>
-        </section>
-
-        
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>If you have any questions or would like to connect, feel free to reach out!</p>
-            <p>Email: <a href="mailto:seanpaseos8@gmail.com">seanpaseos8@gmail.com</a></p>
         </section>
     </div>
 
